@@ -16,6 +16,7 @@ const Cadastrar=()=>{
      Cadastre-se
     </h2>
     </div>
+    {/*-------------area inputs----------------------*/}
     <form class="area-input">
      <input class="input-formulario" placeholder="Usuario" type="text"/>
      <input class="input-formulario" placeholder="Nome" type="text"/>
@@ -26,12 +27,14 @@ const Cadastrar=()=>{
       CADASTRAR
      </button>
     </form>
+    {/*---------------area login/cadastro-------------*/}
     <p class="rodape-formulario">
      Já possui conta?
      <a href="#">
       entre aqui
      </a>
     </p>
+    {/* --------------------------- */}
    </div>
    <div class="secao-imagem">
     <img class="fundo" src={fundo}/>

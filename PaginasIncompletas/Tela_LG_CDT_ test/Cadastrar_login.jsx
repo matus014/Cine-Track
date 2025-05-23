@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "../Tela_Cadastro/Cadastrar.css";
-import fundo from '../../assets/fundo.png'
-import logo from '../../assets/logoReversa.png'
+import fundo from '../../src/assets/fundo.png'
+import logo from '../../src/assets/logoReversa.png'
+import "../../src/pages/Tela_Cadastro/Cadastrar.css"; // Import the CSS file
 
 export default function AuthScreen() {
   const [isLogin, setIsLogin] = useState(true);

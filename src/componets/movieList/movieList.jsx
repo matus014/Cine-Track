@@ -11,11 +11,6 @@ export default function Movielist() {
  const [movie, setMovie] = useState([]);
 
 
-const page = 10 //pagina
-//criar  metodo para navegar  pagina
-
-
-
 useEffect(() =>{
     getMovies();
 }, []);
@@ -31,41 +26,11 @@ useEffect(() =>{
         
     }).then(response =>{
         setMovie(response.data.results);
-        console.log(response.data.results)
     })
   };
 
-
-
-
-//----------------------search-----------------//
-  const [procurarFilme, setProcurarFilme] = useState('');
-
-  const procurarFilmes = () => {
-    if (!procurarFilme.trim()) return;
-
-    axios.get('https://api.themoviedb.org/3/search/movie', {
-      params: {
-        api_key: 'ee5f701910b4a35dabf3c72875909f62',
-        language: 'pt-BR',
-        query: procurarFilme
-      }
-    }).then(response => {
-      const sorted = response.data.results.sort((a, b) =>
-        a.title.localeCompare(b.title)
-      );
-      setMovie(sorted);
-    });
-  };
-//----------------------search-----------------//
-
   return (
 <>
-    <NavBar
-    procurarFilme={procurarFilme}
-    setProcurarFilme={setProcurarFilme}
-    manipularFilme={procurarFilmes}
-  />
     <ul className="movie-list">
       {movie.map((element) => (
         <MovieCard

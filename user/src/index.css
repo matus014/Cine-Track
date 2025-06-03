@@ -1,0 +1,30 @@
+:root {
+
+  background-color: #242424;
+
+}
+
+
+body {
+  margin: 0;
+  min-width: 100vh;
+      height: 100vh;
+    background-color: #0F1729;
+}
+
+html ::-webkit-scrollbar {
+  width: 13px;
+  
+}
+
+
+html ::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  border: 2px solid #46494944;
+  background: #4e4e4e;
+}
+
+html ::-webkit-scrollbar-track {
+  background: #0F1729;
+}
+

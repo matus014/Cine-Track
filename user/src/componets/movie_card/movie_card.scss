@@ -1,0 +1,81 @@
+.card-filme {
+  width: 100%;
+  min-height: 100%;
+  border-radius: 8px;
+
+  overflow: hidden;
+  position: relative;
+
+  .poster-filme img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 0.6s;
+  }
+  .info-filme {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(#00000000, #000000 90%);
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 4px;
+
+    .titulo-filme {
+      font-size: 20px;
+      margin-bottom: px;
+      color: white;
+    }
+    .contexto {
+      color: white;
+      font-size: 12px;
+      margin-top: 8px;
+      height: 0px;
+      opacity: 0;
+      transition: all 0.6s;
+    }
+    .descricao {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+      margin-right: 1.8rem;
+      color: white;
+      font-size: 0.89rem;
+    }
+
+    .botao-ver-mais {
+      background-color: #8dccc1;
+      padding: 18px;
+      border-radius: 7px;
+      font-size: 20px;
+      color: #000000;
+      font-weight: bolder;
+      border: none;
+      cursor: pointer;
+      width: 97%;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+
+    .poster-filme img {
+      opacity: 0.6;
+    }
+
+    .contexto {
+      opacity: 1;
+      height: 30px;
+    }
+
+    .info-filme:has(.descricao) .contexto {
+      height: 240px;
+    }
+
+    .info-filme:not(:has(.descricao)) .contexto {
+      height: 60px;
+    }
+  }
+}

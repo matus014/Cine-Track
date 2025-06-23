@@ -1,0 +1,20 @@
+.favoritos-container {
+  padding: 2rem;
+  background-color: #121212;
+  min-height: 100vh;
+}
+
+.favoritos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.favorito-item {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.favorito-item:hover {
+  transform: scale(1.03);
+}

@@ -2,6 +2,11 @@ import React from "react";
 import "./Perfil.css";
 import NavBar from "../../componets/navBar/navBar";
 
+
+
+
+
+
 const PerfilPage = () => {
   const perfil = {
     name: "????????",

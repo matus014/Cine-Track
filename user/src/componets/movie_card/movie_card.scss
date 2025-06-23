@@ -2,7 +2,6 @@
   width: 100%;
   min-height: 100%;
   border-radius: 8px;
-
   overflow: hidden;
   position: relative;
 
@@ -11,7 +10,7 @@
     height: 50%;
     object-fit: cover;
     opacity: 1;
-    transition: opacity 0.6s;
+    transition: opacity 1.6s;
   }
   .info-filme {
     position: absolute;
@@ -35,7 +34,7 @@
       margin-top: 8px;
       height: 0px;
       opacity: 0;
-      transition: all 0.6s;
+      transition: all 0.8s;
     }
     .descricao {
       display: flex;
@@ -62,14 +61,16 @@
     cursor: pointer;
 
     .poster-filme img {
-      opacity: 0.6;
+      opacity: 0.8;
     }
 
     .contexto {
       opacity: 1;
       height: 30px;
     }
-
+    .info-filme {
+      height: 240px;
+    }
     .info-filme:has(.descricao) .contexto {
       height: 240px;
     }

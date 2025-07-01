@@ -13,7 +13,7 @@ router.post("/cadastro", async (req, res) => {
   const SQL = `SELECT nameUsuario, email, telefone FROM usuario WHERE nameUsuario = ? OR email = ? OR telefone = ?`;
 
   db.query(SQL, [usuario, email, telefone], (err, results) => {
-    if (err) return res.status(500).json({ error: "Erro no servidor" });
+    if (err) return res.status(500).json({ error: err.message });
 
     const conflicts = [];
     results.forEach(row => {
